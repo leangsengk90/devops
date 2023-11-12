@@ -1,7 +1,7 @@
 pipeline{
   agent any
-  tools{
-    maven '3.8.6'
+  environments {
+    PATH="/usr/bin:$PATH"
   }
   stages{
     stage("Get Resources"){
