@@ -1,6 +1,10 @@
 - hosts: all
   become: true
   tasks:
+    - name: Install Docker Compose
+      apt:
+        name: docker-compose
+        state: present
     - name: Build Container Image
       docker_image:
         name: registry.asani.pro/spring-app:1.1.1
