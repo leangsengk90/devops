@@ -4,5 +4,5 @@
     - name: Build Container Image
       command: |
         mvn clean package
-      chdir:
-        /opt/apps/spring-testing-good
+      args:
+        chdir: /opt/apps/spring-testing-good
