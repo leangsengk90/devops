@@ -5,4 +5,4 @@
       command: |
         mvn clean package
       chdir:
-        /opt/spring-testing-good
+        /opt/apps/spring-testing-good
