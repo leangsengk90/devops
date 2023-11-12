@@ -2,6 +2,6 @@
   become: true
   tasks:
     - name: Build Container Image
-      command: "mvn clean package"
+      command: mvn clean package
       args:
         chdir: /opt/apps
