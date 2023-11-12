@@ -11,6 +11,13 @@
         build:
           path: /opt/apps
         source: build
+
+    - name: Login Registry
+      docker_login:
+        registry: registry.asani.pro
+        username: admin
+        password: "123"
+        reauthorize: yes
     
     - name: Push to Registry
       docker_image:
