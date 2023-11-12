@@ -1,8 +1,8 @@
 pipeline{
   agent any
-  // environment {
-  //   PATH="/usr/bin:$PATH"
-  // }
+  environment {
+    PATH="/usr/bin:$PATH"
+  }
   stages{
     stage("Get Resources"){
       steps{
