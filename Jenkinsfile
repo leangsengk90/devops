@@ -1,6 +1,8 @@
 pipeline{
   agent any
-
+  tools{
+    maven '3.8.6'
+  }
   stages{
     stage("Get Resources"){
       steps{
