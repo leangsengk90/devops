@@ -6,3 +6,4 @@
         repo: 'https://github.com/leangsengk90/spring-testing-good.git'
         dest: /opt
         clone: yes
+        update: yes
