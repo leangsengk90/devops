@@ -4,6 +4,6 @@
     - name: Get Resources
       git:
         repo: 'https://github.com/leangsengk90/spring-testing-good.git'
-        dest: /opt
+        dest: /opt/apps
         clone: yes
         update: yes
