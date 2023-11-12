@@ -1,13 +1,16 @@
-- name: Build Container Image
-  docker_image:
-    name: registry.asani.pro/spring-app:1.1.1
-    build:
-      path: /opt/apps
-    source: build
-
-- name: Push to Registry
-  docker_image:
-    name: registry.asani.pro/spring-app:1.1.1
-    repository: registry.asani.pro/spring-app:1.1.1
-    push: yes
-    source: local
+- hosts: all
+  become: true
+  tasks:
+    - name: Build Container Image
+      docker_image:
+        name: registry.asani.pro/spring-app:1.1.1
+        build:
+          path: /opt/apps
+        source: build
+    
+    - name: Push to Registry
+      docker_image:
+        name: registry.asani.pro/spring-app:1.1.1
+        repository: registry.asani.pro/spring-app:1.1.1
+        push: yes
+        source: local
