@@ -22,9 +22,11 @@ pipeline{
     }
     stage("Docker Stage"){
       steps{
-        sh """
-          ansible-playbook -i ansible/inventory.ini -l workers ansible/playbooks/docker.yml
-        """
+        withCredentials([usernamePassword(credentialsId: 'registry-id', passwordVariable: 'PASSWORD', usernameVariable: 'USERNAME')]) {
+           sh """
+              ansible-playbook -i ansible/inventory.ini -l workers ansible/playbooks/docker.yml
+            """
+        }
       }
     }
   }
